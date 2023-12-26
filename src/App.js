@@ -3,8 +3,11 @@ import "./App.css";
 import { useState } from "react";
 import Navbar from "./components/Navbar/index";
 import PostsList from "./components/PostsList/index";
+import Modal from "./components/Modal";
 
 function App() {
+  let [showModal, setShowModal] = useState(false);
+
   let [posts, setPosts] = useState([
     {
       id: 1,
@@ -25,9 +28,21 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar setShowModal={setShowModal} />
 
-      <PostsList posts={posts} /> 
+      <PostsList posts={posts} />
+
+      {showModal && (
+        <Modal>
+          <h1>Zoom class is avaliable now!</h1>
+
+          <p>
+            feel free to <a href="">join</a> here.
+          </p>
+
+          <button onClick={()=>setShowModal(false)}>Close</button>
+        </Modal>
+      )}
     </>
   );
 }
