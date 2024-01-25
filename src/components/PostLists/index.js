@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-export default function PostsList({ posts }) {
+export default function PostLists({ posts }) {
   return (
     <div className="postList">
       {posts.map((post) => (

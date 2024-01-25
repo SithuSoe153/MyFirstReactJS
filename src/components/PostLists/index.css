@@ -1,0 +1,18 @@
+.postList {
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: flex-start; /* Align items to the start of the container */
+    align-items: flex-start; /* Align items to the start vertically */
+    padding: 10px; /* Optional: adds some space inside the container */
+}
+
+.postList .single-post {
+    flex: 0 0 calc(33.33% - 40px); /* Adjusted for three items per row */
+    background-color: beige;
+    margin: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

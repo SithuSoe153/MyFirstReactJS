@@ -1,21 +1,21 @@
-.navbar{
-    background-color: yellow;
-    padding: 10%;
+nav{
+  background-color: whitesmoke;
+  padding: 10px;
 }
 
- .navbar .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.navbar .container ul{
-    display: flex;
+.container ul{
+  display: flex;
 }
 
-.navbar .container li{
-    list-style-type: none;
-    margin: 0 20px;
+.container li{
+  list-style-type: none;
+  margin: 0 20px;
 }
