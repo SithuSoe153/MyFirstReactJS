@@ -6,6 +6,8 @@ import PostLists from "./components/PostLists";
 import Modal from "./components/Modal";
 
 function App() {
+  let [showModal, setShowModal] = useState(false);
+
   let [posts, setPosts] = useState([
     { id: 1, title: "Post 1" },
     { id: 2, title: "Post 2" },
@@ -20,18 +22,22 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar setShowModal={setShowModal} />
 
-      <Modal>
-        <h1>PHP Zoom Class is started!</h1>
-        <p>
-          Feel free to <a href="#">join</a> here
-        </p>
+      {showModal && (
+        <Modal>
+          <h1>PHP Zoom Class is started!</h1>
+          <p>
+            Feel free to <a href="#">join</a> here
+          </p>
 
-        <h6>
-          <a href="">Terms and condition</a>
-        </h6>
-      </Modal>
+          <h6>
+            <a href="">Terms and condition</a>
+          </h6>
+
+          <button onClick={()=>setShowModal(false)}>Close</button>
+        </Modal>
+      )}
 
       <PostLists posts={posts} />
     </>
